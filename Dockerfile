@@ -2,8 +2,9 @@ FROM ubuntu:jammy
 
 ENV TZ="Europe/Paris"
 RUN apt-get update -y
-RUN apt-get install tzdata -y
-RUN apt-get install nginx-extras -y
-RUN apt-get install certbot python3-certbot-nginx -y
+RUN apt-get install -y tzdata
+RUN apt-get install -y nginx
+RUN apt-get install -y nginx-extras
+RUN apt-get install -y certbot python3-certbot-nginx
 
 COPY ./baseconfig.conf /etc/nginx/nginx.conf
