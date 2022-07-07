@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM ubuntu:jammy
 
 RUN apt-get update -y
 RUN apt-get install nginx-extras -y
